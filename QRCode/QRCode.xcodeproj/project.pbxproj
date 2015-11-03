@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BBF7CAFF1BE862BD006E312F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CAFE1BE862BD006E312F /* AppDelegate.swift */; };
-		BBF7CB011BE862BD006E312F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CB001BE862BD006E312F /* FirstViewController.swift */; };
-		BBF7CB031BE862BD006E312F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CB021BE862BD006E312F /* SecondViewController.swift */; };
+		BBF7CB011BE862BD006E312F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CB001BE862BD006E312F /* ReaderViewController.swift */; };
+		BBF7CB031BE862BD006E312F /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF7CB021BE862BD006E312F /* GeneratorViewController.swift */; };
 		BBF7CB061BE862BD006E312F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF7CB041BE862BD006E312F /* Main.storyboard */; };
 		BBF7CB081BE862BD006E312F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF7CB071BE862BD006E312F /* Assets.xcassets */; };
 		BBF7CB0B1BE862BD006E312F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF7CB091BE862BD006E312F /* LaunchScreen.storyboard */; };
@@ -18,8 +18,8 @@
 /* Begin PBXFileReference section */
 		BBF7CAFB1BE862BD006E312F /* QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF7CAFE1BE862BD006E312F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BBF7CB001BE862BD006E312F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BBF7CB021BE862BD006E312F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BBF7CB001BE862BD006E312F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
+		BBF7CB021BE862BD006E312F /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 		BBF7CB051BE862BD006E312F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBF7CB071BE862BD006E312F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBF7CB0A1BE862BD006E312F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				BBF7CAFE1BE862BD006E312F /* AppDelegate.swift */,
-				BBF7CB001BE862BD006E312F /* FirstViewController.swift */,
-				BBF7CB021BE862BD006E312F /* SecondViewController.swift */,
+				BBF7CB001BE862BD006E312F /* ReaderViewController.swift */,
+				BBF7CB021BE862BD006E312F /* GeneratorViewController.swift */,
 				BBF7CB041BE862BD006E312F /* Main.storyboard */,
 				BBF7CB071BE862BD006E312F /* Assets.xcassets */,
 				BBF7CB091BE862BD006E312F /* LaunchScreen.storyboard */,
@@ -138,9 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF7CB031BE862BD006E312F /* SecondViewController.swift in Sources */,
+				BBF7CB031BE862BD006E312F /* GeneratorViewController.swift in Sources */,
 				BBF7CAFF1BE862BD006E312F /* AppDelegate.swift in Sources */,
-				BBF7CB011BE862BD006E312F /* FirstViewController.swift in Sources */,
+				BBF7CB011BE862BD006E312F /* ReaderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
