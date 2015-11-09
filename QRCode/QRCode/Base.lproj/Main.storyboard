@@ -105,17 +105,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D2O-Od-DcV">
+                                <rect key="frame" x="64" y="102" width="473" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="qgE-Uy-mxe"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="QRCode"/>
+                                    <segment title="AztecCode"/>
+                                    <segment title="Barcode"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="IIp-sl-wHi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="1wF-mu-PmH"/>
+                            <constraint firstItem="D2O-Od-DcV" firstAttribute="trailing" secondItem="IIp-sl-wHi" secondAttribute="trailing" id="Gbz-a5-FDQ"/>
                             <constraint firstItem="Ww4-Y0-cKk" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Gtr-wH-vGh"/>
+                            <constraint firstItem="D2O-Od-DcV" firstAttribute="top" secondItem="IIp-sl-wHi" secondAttribute="bottom" constant="8" id="MMj-t9-C2r"/>
                             <constraint firstItem="IIp-sl-wHi" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="44" id="RfL-PZ-Tas"/>
                             <constraint firstItem="IIp-sl-wHi" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="44" id="VWi-Ds-UtP"/>
                             <constraint firstItem="vOb-KX-X4f" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="WvG-jO-RVk"/>
                             <constraint firstItem="vOb-KX-X4f" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="44" id="b4v-af-tFO"/>
+                            <constraint firstItem="D2O-Od-DcV" firstAttribute="leading" secondItem="IIp-sl-wHi" secondAttribute="leading" id="gP5-7N-IDx"/>
                             <constraint firstItem="Ww4-Y0-cKk" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="khN-a6-eUd"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="vOb-KX-X4f" secondAttribute="bottom" constant="44" id="lv8-FC-XLZ"/>
                         </constraints>
@@ -126,6 +141,7 @@
                     <tabBarItem key="tabBarItem" title="Generator" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="imageView" destination="Ww4-Y0-cKk" id="rxa-Fq-UQM"/>
+                        <outlet property="segmentedControl" destination="D2O-Od-DcV" id="2ts-X7-5ua"/>
                         <outlet property="textField" destination="IIp-sl-wHi" id="2AA-hc-hPf"/>
                     </connections>
                 </viewController>

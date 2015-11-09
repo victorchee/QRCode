@@ -12,6 +12,7 @@ import CoreImage
 class GeneratorViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -42,7 +43,17 @@ class GeneratorViewController: UIViewController {
     }
     
     private func generateQRCode(text: String) -> UIImage? {
-        guard let filter = CIFilter(name: "CIQRCodeGenerator") else {
+        var filterName: String!
+        switch segmentedControl.selectedSegmentIndex {
+        case 1 :
+            filterName = "CIAztecCodeGenerator"
+        case 2 :
+            filterName = "CICode128BarcodeGenerator"
+        default :
+            filterName = "CIQRCodeGenerator"
+        }
+        
+        guard let filter = CIFilter(name: filterName) else {
             return nil
         }
         filter.setDefaults()
