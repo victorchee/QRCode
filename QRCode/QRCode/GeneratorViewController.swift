@@ -13,14 +13,15 @@ class GeneratorViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         textField.text = textField.placeholder
         if let text = textField.text {
-            imageView.image = generateQRCode(text)
+            let image = generateQRCode(text)
+            button.setBackgroundImage(image, forState: .Normal)
         }
     }
 
@@ -33,12 +34,27 @@ class GeneratorViewController: UIViewController {
         textField.resignFirstResponder()
     }
     
+    @IBAction func buttonTapped(sender: UIButton) {
+        guard let image = sender.backgroundImageForState(.Normal) else {
+            return
+        }
+        guard let text = readQRCode(image) else {
+            return
+        }
+        let alert = UIAlertController(title: "Read QRCode From Image", message: text, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in
+            
+        }
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func generate(sender: UIButton) {
         if let text = textField.text {
             let image = generateQRCode(text)
-            imageView.image = image
+            button.setBackgroundImage(image, forState: .Normal)
         } else {
-            imageView.image = nil
+            button.setBackgroundImage(nil, forState: .Normal)
         }
     }
     
@@ -89,5 +105,16 @@ class GeneratorViewController: UIViewController {
         return resizedImage
     }
 
+    private func readQRCode(image: UIImage) -> String? {
+        let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy : CIDetectorAccuracyHigh])
+        guard let ciImage = CIImage(image: image) else {
+            return nil
+        }
+        let features = detector.featuresInImage(ciImage)
+        guard let feature = features.first as? CIQRCodeFeature else {
+            return nil
+        }
+        return feature.messageString
+    }
 }
 

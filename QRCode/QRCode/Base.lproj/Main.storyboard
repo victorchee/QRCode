@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -68,14 +68,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ww4-Y0-cKk">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="LRf-Ip-IIy"/>
-                                    <constraint firstAttribute="width" secondItem="Ww4-Y0-cKk" secondAttribute="height" multiplier="1:1" id="n7I-5M-0eo"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOb-KX-X4f">
                                 <rect key="frame" x="64" y="477" width="472" height="30"/>
                                 <animations/>
@@ -117,6 +109,17 @@
                                     <segment title="Barcode"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy6-qH-4A4">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jy6-qH-4A4" secondAttribute="height" multiplier="1:1" id="0AH-uL-qDC"/>
+                                    <constraint firstAttribute="width" constant="200" id="XO8-Dk-0eg"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="PPU-SG-Hv9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -124,14 +127,14 @@
                         <constraints>
                             <constraint firstItem="IIp-sl-wHi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="1wF-mu-PmH"/>
                             <constraint firstItem="D2O-Od-DcV" firstAttribute="trailing" secondItem="IIp-sl-wHi" secondAttribute="trailing" id="Gbz-a5-FDQ"/>
-                            <constraint firstItem="Ww4-Y0-cKk" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Gtr-wH-vGh"/>
                             <constraint firstItem="D2O-Od-DcV" firstAttribute="top" secondItem="IIp-sl-wHi" secondAttribute="bottom" constant="8" id="MMj-t9-C2r"/>
                             <constraint firstItem="IIp-sl-wHi" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="44" id="RfL-PZ-Tas"/>
+                            <constraint firstItem="Jy6-qH-4A4" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="UoN-4r-GbP"/>
                             <constraint firstItem="IIp-sl-wHi" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="44" id="VWi-Ds-UtP"/>
                             <constraint firstItem="vOb-KX-X4f" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="WvG-jO-RVk"/>
                             <constraint firstItem="vOb-KX-X4f" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="44" id="b4v-af-tFO"/>
                             <constraint firstItem="D2O-Od-DcV" firstAttribute="leading" secondItem="IIp-sl-wHi" secondAttribute="leading" id="gP5-7N-IDx"/>
-                            <constraint firstItem="Ww4-Y0-cKk" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="khN-a6-eUd"/>
+                            <constraint firstItem="Jy6-qH-4A4" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="hbA-uv-5kO"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="vOb-KX-X4f" secondAttribute="bottom" constant="44" id="lv8-FC-XLZ"/>
                         </constraints>
                         <connections>
@@ -140,7 +143,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Generator" image="second" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="imageView" destination="Ww4-Y0-cKk" id="rxa-Fq-UQM"/>
+                        <outlet property="button" destination="Jy6-qH-4A4" id="aPb-mS-jME"/>
                         <outlet property="segmentedControl" destination="D2O-Od-DcV" id="2ts-X7-5ua"/>
                         <outlet property="textField" destination="IIp-sl-wHi" id="2AA-hc-hPf"/>
                     </connections>
